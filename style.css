@@ -1,0 +1,607 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    scroll-behavior: smooth; /* Smooth scroll */
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 150px;
+}
+
+.menu a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #ff6600;
+}
+
+.menu a:focus {
+    outline: 2px solid #ff6600; /* Focus for accessibility */
+}
+
+.right-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.login-btn {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #e65c00;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url('homepage_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 10px 0;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-bar input {
+    padding: 12px;
+    width: 300px;
+    border-radius: 30px 0 0 30px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-bar .search-btn {
+    padding: 12px 30px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 0 30px 30px 0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar .search-btn:hover {
+    background-color: darkorange;
+}
+
+/* Trending Destinations Section */
+.trending-destinations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0;
+    position: relative;
+    
+}
+
+.background {
+    background-image: url('trading.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    padding: 180px 20px;
+    width: 85%;
+    max-width: 1700px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.text-container h2 {
+    font-size: 4.5rem;
+    margin-bottom: 10px;
+}
+
+.text-container p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.destinations {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 70px;
+    position: absolute;
+    bottom: -75px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1600px;
+    z-index: 2;
+}
+
+.destination {
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    color: #e65c00;
+}
+
+.destination:hover {
+    transform: scale(1.05);
+}
+
+.destination img {
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+}
+
+.destination p {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.destination p:hover {
+    color: #ff6600;
+}
+
+/* Bike Trip Section */
+.spiti-valley-section {
+    background-color: #e6f0f8;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 500px; /* Adjust height as needed */
+    width: 100%; /* Full width */
+}
+
+.spiti-valley-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between bike path and text */
+    width: 90%; /* Make the content container smaller */
+    max-width: 1400px; /* Maximum width */
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 400px; /* Adjust height */
+   background-color: rgb(233, 231, 231);
+}
+
+.bike-path {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center; /* Center the bike path vertically */
+    flex: 1; /* Make it take up some space equally */
+}
+
+.bike-path img {
+    width: 150px; /* Adjust the size of the bike icon */
+    margin-bottom: 20px;
+}
+
+.bike-path .locations {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.bike-path .locations li {
+    font-size: 16px; /* Adjust font size */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.text-content {
+    text-align: center; /* Center text in the box */
+    flex: 1; /* Center the text content */
+    padding: 20px;
+    
+}
+
+.text-content h2 {
+    font-size: 2.5em;
+    color: #3e7dbc;
+    margin: 0;
+}
+
+.text-content h3 {
+    font-size: 1.8em;
+    color: #3e7dbc;
+    margin: 0;
+    font-weight: normal;
+}
+
+.text-content p {
+    font-size: 1.2em;
+    color: #333;
+    margin: 20px 0;
+}
+
+.explore-packages-btn {
+    background-color: #3e7dbc;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.explore-packages-btn:hover {
+    background-color: #2e6196;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 600px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .search-bar input {
+        width: 220px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .destination img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .text-container h2 {
+        font-size: 3rem;
+    }
+}
+
+
+
+/* WEEKEND TRIPS SECTION */
+.weekend-trips {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.weekend-trips h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.weekend-trip-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.weekend-trip-container {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 80%;
+    scroll-behavior: smooth;
+}
+
+.weekend-trip-card {
+    position: relative;
+    flex-shrink: 0;
+    width: 250px;
+    height: 350px;
+    margin: 0 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.weekend-trip-card:hover {
+    transform: scale(1.05);
+}
+
+.weekend-trip-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.weekend-trip-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 15px;
+    text-align: left;
+    transition: background 0.3s ease;
+    border-radius: 0 0 10px 10px;
+}
+
+.weekend-trip-info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.weekend-trip-info p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.prev-btn, .next-btn {
+    background-color: #ff5722;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev-btn {
+    left: 5px;
+}
+
+.next-btn {
+    right: 5px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: #e64a19;
+}
+
+/* BACKPACKING TRIPS SECTION */
+.backpacking-trips {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #e9f0f5; /* Different background color for separation */
+}
+
+.backpacking-trips h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.backpacking-trip-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.backpacking-trip-container {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 80%;
+    scroll-behavior: smooth;
+}
+
+.backpacking-trip-card {
+    position: relative;
+    flex-shrink: 0;
+    width: 250px;
+    height: 350px;
+    margin: 0 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.backpacking-trip-card:hover {
+    transform: scale(1.05);
+}
+
+.backpacking-trip-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.backpacking-trip-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 15px;
+    text-align: left;
+    transition: background 0.3s ease;
+    border-radius: 0 0 10px 10px;
+}
+
+.backpacking-trip-info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.backpacking-trip-info p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.prev-btn-bp, .next-btn-bp {
+    background-color: #3f51b5;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev-btn-bp {
+    left: 5px;
+}
+
+.next-btn-bp {
+    right: 5px;
+}
+
+.prev-btn-bp:hover, .next-btn-bp:hover {
+    background-color: #3949ab;
+}
+
+@media (max-width: 768px) {
+    .weekend-trip-container, .backpacking-trip-container {
+        width: 100%;
+    }
+
+    .weekend-trip-card, .backpacking-trip-card {
+        min-width: 90%;
+        margin: 0 auto;
+    }
+}
+
+
+
+/*fotter*/
+
+
+.footer {
+    background-color: #f4f4f4;
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-column h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #007bff;
+}
+
+.social-icons {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.social-icons a img {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.contact-info p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #007bff;
+}
+
